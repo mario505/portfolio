@@ -1,3 +1,14 @@
 export default function Home(){
-    return <div>home</div>;
+    return (
+    <div>
+        {/* Theme Toggle */}
+
+        {/* Background Effects */}
+
+        {/* Navbar */}
+
+        {/* Main Content */}
+
+        {/* Footer */} 
+    </div>);
 };
