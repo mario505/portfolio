@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, Phone, Send, Twitter } from "lucide-react";
+import { Mail, MapIcon, Phone } from "lucide-react";
 import { cn } from "../lib/utils";
 
 export default function ContactSection() {
@@ -14,11 +14,11 @@ export default function ContactSection() {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="flex items-center justify-center">
-          <div className="flex-col items-center space-y-8 text-center" >
+        <div className="flex items-center w-full justify-center">
+          <div className="flex-col items-center w-full space-y-12 text-center">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-            <div className="flex items-center space-y-6 justify-center">
+            <div className="flex items-center w-full space-x-10 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
@@ -57,7 +57,7 @@ export default function ContactSection() {
 
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <MapIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
@@ -67,7 +67,7 @@ export default function ContactSection() {
                       "transitions-colors",
                     )}
                   >
-                    Lima, Peru (South America)
+                    Lima, Peru
                   </a>
                 </div>
               </div>
