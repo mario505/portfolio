@@ -26,13 +26,13 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
-                    href="mail:hellowordl@hgmail.com"
+                    /*  href="mail:m505dp23@gmail.com" */
                     className={cn(
                       "text-muted-foreground hover:text-primary",
                       "transitions-colors",
                     )}
                   >
-                    Mario-505@gmail
+                    m505dp23@gmail.com
                   </a>
                 </div>
               </div>
@@ -44,7 +44,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-medium">Phone</h4>
                   <a
-                    href="tel: 12345311"
+                    /*                     href="tel: 12345311" */
                     className={cn(
                       "text-muted-foreground hover:text-primary",
                       "transitions-colors",

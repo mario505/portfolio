@@ -87,10 +87,9 @@ export default function AboutSection() {
                 </div>
 
                 <div className="text-left ">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">Backend Expertise</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies
+                    Building robust and secure Backend solutions 
                   </p>
                 </div>
               </div>
