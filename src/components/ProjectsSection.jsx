@@ -9,6 +9,15 @@ import { cn } from "../lib/utils";
 
 const projects = [
   {
+    id: 4,
+    title: "Project Manager",
+    description: "Basic Project + Tasks Manager with React",
+    image: "/projects/project4.png",
+    tags: ["React", "TailwindCSS", "git"],
+    demoUrl: "https://proj-man-6nbn.vercel.app/",
+    gitUrl: "https://github.com/mario505/projman2",
+  },
+  {
     id: 1,
     title: "Almost Final Countdown",
     description: "Test your timing skill!",
