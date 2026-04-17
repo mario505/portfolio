@@ -9,6 +9,15 @@ import { cn } from "../lib/utils";
 
 const projects = [
   {
+    id: 5,
+    title: "Place Picker",
+    description: "Choose place you'd like to visit, the list is ordered from closest to fartest from your location!",
+    image: "/projects/project5.png",
+    tags: ["React", "CSS", "git"],
+    demoUrl: "https://place-picker-ebon-five.vercel.app/",
+    gitUrl: "https://github.com/mario505/placePicker",
+  },
+  {
     id: 4,
     title: "Project Manager",
     description: "Basic Project + Tasks Manager with React",
