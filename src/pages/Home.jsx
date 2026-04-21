@@ -2,6 +2,7 @@ import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import LangToggle from "../components/LangToggle";
 import Navbar from "../components/Navbar";
 import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillSection";
@@ -13,6 +14,8 @@ export default function Home(){
     <div className="min-h-screen bg-backround text-foreground overflow-x-hidden">
         {/* Theme Toggle */}
         <ThemeToggle />
+
+        <LangToggle />
 
         {/* Background Effects */}
         <StarBackground />
