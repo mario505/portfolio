@@ -8,14 +8,17 @@ export default function LangToggle() {
   };
 
   return (
-    <button
+    <div
       onClick={sendmsg}
       className={cn(
         "fixed max-sm:hidden top-5 right-15 z-50 p-2 rounded-full",
         "transition-colors duration-300 focus:outlin-hidden",
       )}
     >
-      <Sun className="h-6 w-6 text-yellow-300" />{" "}
-    </button>
+      <p className="cosmic-button flex gap-2">
+        <span className="text-sm">ES</span>{" "}
+        <img src="es.png" className="h-5 w-5 object-contain" />
+      </p>
+    </div>
   );
 }
