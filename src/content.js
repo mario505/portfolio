@@ -1,5 +1,16 @@
 export const CONTENT = [
   {
+    flag: "EN",
+    flagImg: "us.png",
+    navItems: [
+      { name: "Home", href: "#hero" },
+      { name: "About", href: "#about" },
+      { name: "Skills", href: "#skills" },
+      { name: "Projects", href: "#projects" },
+      { name: "Contact", href: "#contact" },
+    ],
+    navName: "Mario's",
+    navPort: "Portfolio",
     hello: "Hi, I'm Mario Reyes",
     introduction:
       "I create stellar web experiences with modern technologies. As a full-stack developer, I build interfaces that are both beautiful and functional.",
@@ -14,6 +25,17 @@ export const CONTENT = [
     aboutb2: "Download Resume",
   },
   {
+    flag: "ES",
+    flagImg: "es.png",
+    navItems: [
+      { name: "Home", href: "#hero" },
+      { name: "About", href: "#about" },
+      { name: "Skills", href: "#skills" },
+      { name: "Proyectos", href: "#projects" },
+      { name: "Contacto", href: "#contact" },
+    ],
+    navName: "Mi",
+    navPort: "Portafolio",
     hello: "Hola, soy Mario Reyes",
     introduction:
       "Creo experiencias web estelares con tecnologias modersnas. En mi rol como desarrollador full-stack, me enfoco en construir interfaces que son tanto agradables como funcionales",

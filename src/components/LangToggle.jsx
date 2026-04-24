@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { useLang } from "../contexts/LangContext";
-
-const flags = ["us.png", "es.png"];
+import { CONTENT } from "../content";
 
 export default function LangToggle() {
   const { langIndex, handleSetLangIndex } = useLang();
-  const sendmsg = () => {
-    console.log("toggle was clicked");
-  };
 
   return (
     <div
@@ -19,8 +15,11 @@ export default function LangToggle() {
       )}
     >
       <p className="cosmic-button flex gap-2">
-        <span className="text-sm">{langIndex === 0 ? "EN" : "ES"}</span>{" "}
-        <img src={flags[langIndex]} className="h-5 w-5 object-contain" />
+        <span className="text-sm">{CONTENT[langIndex].flag}</span>{" "}
+        <img
+          src={CONTENT[langIndex].flagImg}
+          className="h-5 w-5 object-contain"
+        />
       </p>
     </div>
   );
