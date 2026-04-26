@@ -1,42 +1,37 @@
 import { Code, User, Briefcase } from "lucide-react";
 import { cn } from "../lib/utils";
+import { useLang } from "../contexts/LangContext";
+import { CONTENT } from "../content";
 
 export default function AboutSection() {
+  const { langIndex, handleSetLangIndex } = useLang();
+
   return (
     <section id="about" className="py-24 px-4 relative">
       {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary">Me</span>
+          {CONTENT[langIndex].about}{" "}
+          <span className="text-primary"> {CONTENT[langIndex].aboutN}</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              {CONTENT[langIndex].about1}
             </h3>
 
-            <p className="text-muted-foreground">
-              I'm starting my journey as a full stack Web developer, I
-              specialize in creating responsive, accesible, and performant web
-              applications using modern technologies
-            </p>
+            <p className="text-muted-foreground">{CONTENT[langIndex].about2}</p>
 
-            <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
-            </p>
+            <p className="text-muted-foreground">{CONTENT[langIndex].about3}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
-                {" "}
-                Get In Touch
+                {CONTENT[langIndex].aboutb1}
               </a>
 
               <a
-                href="/Resume_Mario_Reyes.docx"
+                href={CONTENT[langIndex].resume}
                 target="_blank"
                 rel="noreferrer"
                 className={cn(
@@ -44,7 +39,7 @@ export default function AboutSection() {
                   "text-primary hover:bg-primary/10 transition-cololor duration-300",
                 )}
               >
-                Download Resume
+                {CONTENT[langIndex].aboutb2}
               </a>
             </div>
           </div>
@@ -57,10 +52,11 @@ export default function AboutSection() {
                 </div>
 
                 <div className="text-left ">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    {CONTENT[langIndex].aboutI1}
+                  </h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    {CONTENT[langIndex].aboutI2}
                   </p>
                 </div>
               </div>
@@ -72,10 +68,11 @@ export default function AboutSection() {
                 </div>
 
                 <div className="text-left ">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">
+                    {CONTENT[langIndex].aboutI3}
+                  </h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    {CONTENT[langIndex].aboutI4}
                   </p>
                 </div>
               </div>
@@ -87,9 +84,11 @@ export default function AboutSection() {
                 </div>
 
                 <div className="text-left ">
-                  <h4 className="font-semibold text-lg">Backend Expertise</h4>
+                  <h4 className="font-semibold text-lg">
+                    {CONTENT[langIndex].aboutI5}
+                  </h4>
                   <p className="text-muted-foreground">
-                    Building robust and secure Backend solutions 
+                    {CONTENT[langIndex].aboutI6}
                   </p>
                 </div>
               </div>

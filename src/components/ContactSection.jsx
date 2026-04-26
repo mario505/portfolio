@@ -1,22 +1,28 @@
 import { Mail, MapIcon, Phone } from "lucide-react";
 import { cn } from "../lib/utils";
+import { CONTENT } from "../content";
+import { useLang } from "../contexts/LangContext";
 
 export default function ContactSection() {
+  const { langIndex, handleSetLangIndex } = useLang();
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get in <span className="text-primary">Touch</span>
+          {CONTENT[langIndex].cont1}{" "}
+          <span className="text-primary">{CONTENT[langIndex].cont2}</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          {CONTENT[langIndex].cont3}
         </p>
 
         <div className="flex items-center w-full justify-center">
           <div className="flex-col items-center w-full space-y-12 text-center">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {CONTENT[langIndex].cont4}
+            </h3>
 
             <div className="flex items-center w-full space-x-10 justify-center">
               <div className="flex items-start space-x-4">
@@ -24,9 +30,8 @@ export default function ContactSection() {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Email</h4>
+                  <h4 className="font-medium">{CONTENT[langIndex].cont5}</h4>
                   <a
-                    /*  href="mail:m505dp23@gmail.com" */
                     className={cn(
                       "text-muted-foreground hover:text-primary",
                       "transitions-colors",
@@ -42,9 +47,8 @@ export default function ContactSection() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Phone</h4>
+                  <h4 className="font-medium">{CONTENT[langIndex].cont6}</h4>
                   <a
-                    /*                     href="tel: 12345311" */
                     className={cn(
                       "text-muted-foreground hover:text-primary",
                       "transitions-colors",
@@ -60,7 +64,7 @@ export default function ContactSection() {
                   <MapIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Location</h4>
+                  <h4 className="font-medium">{CONTENT[langIndex].cont7}</h4>
                   <a
                     className={cn(
                       "text-muted-foreground hover:text-primary",

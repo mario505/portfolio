@@ -6,12 +6,18 @@ import {
   Link2,
 } from "lucide-react";
 import { cn } from "../lib/utils";
+import { CONTENT } from "../content";
+import { useLang } from "../contexts/LangContext";
 
 const projects = [
   {
     id: 5,
     title: "Place Picker",
-    description: "Choose place you'd like to visit, the list is ordered from closest to fartest from your location!",
+    description: [
+      "Choose a place you'd like to visit, the list is ordered from closest to fartest from your location!",
+      "Escoge un lugar que te gustaria visitar, los lugares a escoger estan ordenados en base a la cercania a tu ubicacion!",
+    ],
+
     image: "/projects/project5.png",
     tags: ["React", "CSS", "git"],
     demoUrl: "https://place-picker-ebon-five.vercel.app/",
@@ -20,7 +26,10 @@ const projects = [
   {
     id: 4,
     title: "Project Manager",
-    description: "Basic Project + Tasks Manager with React",
+    description: [
+      "Basic Project + Tasks Manager with React",
+      "Crea Projectos + Tareas, hecho con React",
+    ],
     image: "/projects/project4.png",
     tags: ["React", "TailwindCSS", "git"],
     demoUrl: "https://proj-man-6nbn.vercel.app/",
@@ -29,7 +38,7 @@ const projects = [
   {
     id: 1,
     title: "Almost Final Countdown",
-    description: "Test your timing skill!",
+    description: ["Test your timing skill!", "Prueba tu timing!"],
     image: "/projects/project1.png",
     tags: ["React", "TailwindCSS", "git"],
     demoUrl: "https://portals-ochre.vercel.app/",
@@ -38,7 +47,10 @@ const projects = [
   {
     id: 2,
     title: "Music Player",
-    description: "Basic Music Player, let's you create Playlists",
+    description: [
+      "Basic Music Player, let's you create Playlists",
+      "Reproductos basico de musica, permite crear Playlists.",
+    ],
     image: "/projects/project2.png",
     tags: ["React", "TailwindCSS", "git"],
     demoUrl: "https://m-player-orcin.vercel.app/",
@@ -47,7 +59,7 @@ const projects = [
   {
     id: 3,
     title: "Memory Game",
-    description: "Classic Memory card game.",
+    description: ["Classic Memory card game.", "Clasico juego de memoria"],
     image: "/projects/project3.png",
     tags: ["React", "TailwindCSS", "git"],
     demoUrl: "https://mem-card-plum.vercel.app/",
@@ -56,17 +68,18 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const { langIndex, handleSetLangIndex } = useLang();
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary">Projects</span>
+          {CONTENT[langIndex].proj1}{" "}
+          <span className="text-primary">{CONTENT[langIndex].proj2}</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my projects. Each project was carefully crafted with
-          attention to detail, performance and user experience.
+          {CONTENT[langIndex].proj3}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,7 +117,7 @@ export default function ProjectsSection() {
 
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
+                  {project.description[langIndex]}
                 </p>
 
                 <div className="flex justify-between items-center">
@@ -115,7 +128,7 @@ export default function ProjectsSection() {
                       target="_blank"
                     >
                       <Link2 size={20} />
-                      Go to Page
+                      {CONTENT[langIndex].proj4}
                     </a>
                     <a
                       href={project.gitUrl}
@@ -123,7 +136,7 @@ export default function ProjectsSection() {
                       target="_blank"
                     >
                       <GitBranchIcon size={20} />
-                      See Git Repo
+                      {CONTENT[langIndex].proj5}
                     </a>
                   </div>
                 </div>
@@ -138,7 +151,8 @@ export default function ProjectsSection() {
             href="https://github.com/mario505?tab=repositories"
             target="_blank"
           >
-            Check my git repos on GitHub <ArrowRight size={16} />
+            {CONTENT[langIndex].proj6}
+            <ArrowRight size={16} />
           </a>
         </div>
       </div>

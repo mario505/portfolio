@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
+import { useLang } from "../contexts/LangContext";
+import { CONTENT } from "../content";
 
 const skills = [
   { name: "JavaScript", level: 80, Category: "frontend" },
@@ -23,6 +25,7 @@ const skills = [
 const categories = ["all", "frontend", "backend", "tools"];
 
 export default function SkillsSection() {
+  const { langIndex, handleSetLangIndex } = useLang();
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
@@ -33,7 +36,8 @@ export default function SkillsSection() {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+          {CONTENT[langIndex].skills1}{" "}
+          <span className="text-primary">{CONTENT[langIndex].skills2}</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -49,7 +53,7 @@ export default function SkillsSection() {
                   : "bg-secondary/70 text-foreground hover:bd-secondary",
               )}
             >
-              {category}
+              {CONTENT[langIndex].categories[key]}
             </button>
           ))}
         </div>
