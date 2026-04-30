@@ -11,6 +11,19 @@ import { useLang } from "../contexts/LangContext";
 
 const projects = [
   {
+    id: 6,
+    title: "React Quiz",
+    description: [
+      "Check how much you know about React",
+      "Test para validar cuanto sabes sobre React",
+    ],
+
+    image: "/projects/project6.png",
+    tags: ["React", "CSS", "git"],
+    demoUrl: "https://quiz1-olive.vercel.app/",
+    gitUrl: "https://github.com/mario505/quiz1",
+  },
+  {
     id: 5,
     title: "Place Picker",
     description: [
